@@ -3,25 +3,36 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
     "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "dev": "next dev --turbopack",
+    "format": "prettier --write .",
+    "lint": "next lint",
+    "outdated": "pnpx npm-check-updates --root --format group -i",
+    "start": "next start"
   },
+  "prettier": "@dc_/prettier-config",
   "dependencies": {
+    "framer-motion": "^12.0.1",
+    "lucide-react": "^0.473.0",
+    "next": "15.1.5",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "next": "15.1.5"
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
-    "typescript": "^5",
-    "@types/node": "^20",
+    "@dc_/prettier-config": "^1.0.3",
+    "@eslint/eslintrc": "^3",
+    "@types/node": "^22",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "postcss": "^8",
-    "tailwindcss": "^3.4.1",
     "eslint": "^9",
     "eslint-config-next": "15.1.5",
-    "@eslint/eslintrc": "^3"
+    "postcss": "^8",
+    "prettier": "^3.4.2",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5"
+  },
+  "packageManager": "pnpm@9.15.4",
+  "engines": {
+    "node": "^22"
   }
 }
