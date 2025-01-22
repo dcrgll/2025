@@ -11,8 +11,11 @@ export default async function Songs() {
   return (
     <p className="pb-8 text-sm text-foreground/80">
       My current most played album is: <br />
-      <b className="text-foreground">{data.topalbums.album[7].name}</b> by{' '}
-      <b className="text-foreground">{data.topalbums.album[7].artist.name}</b>.
+      <b className="text-foreground">{data.topalbums.album[1].name}</b> by{' '}
+      <b className="mt-2 text-foreground">
+        {data.topalbums.album[1].artist.name}
+      </b>
+      .
     </p>
   )
 }

@@ -72,6 +72,7 @@ export default function ContentToggle() {
                     title={project.title}
                     description={project.description}
                     href={project.href}
+                    icon={project.icon}
                   />
                 </motion.div>
               ))}
@@ -94,6 +95,7 @@ export default function ContentToggle() {
                     title={website.title}
                     description={website.description}
                     href={website.href}
+                    icon={website.icon}
                   />
                 </motion.div>
               ))}

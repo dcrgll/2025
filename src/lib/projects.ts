@@ -1,60 +1,78 @@
-export const projects = [
+type Project = {
+  title: string
+  description: string
+  href: string
+  icon: string
+}
+
+export const projects: Project[] = [
   {
     title: 'Feeeedback',
     description: 'A suite of tools for collecting user feedback.',
-    href: 'https://feeeedback.com'
+    href: 'https://feeeedback.com',
+    icon: '/images/projects/feeeedback.png'
   },
   {
     title: 'Grids.am',
     description: 'A collage generator for Last.fm users.',
-    href: 'https://grids.am'
+    href: 'https://grids.am',
+    icon: '/images/projects/grids.png'
   },
   {
     title: 'Trains!',
     description: 'View live train data for any UK station.',
-    href: 'https://trains.cargill.dev'
+    href: 'https://trains.cargill.dev',
+    icon: '/images/projects/trains.png'
   },
   {
     title: 'Oblique Strategies',
     description: 'A vscode extension for generating random Oblique Strategies.',
-    href: 'https://marketplace.visualstudio.com/items?itemName=DanCargill.oblique-strategies'
+    href: 'https://marketplace.visualstudio.com/items?itemName=DanCargill.oblique-strategies',
+    icon: '/images/projects/vscode.png'
   }
 ]
 
-export const websites = [
+export const websites: Project[] = [
   {
     title: 'StudentBeans',
     description: "the world's leading student loyalty network.",
-    href: 'https://studentbeans.com'
+    href: 'https://studentbeans.com',
+    icon: '/images/projects/studentbeans.png'
   },
   {
     title: 'Conjurer',
     description: 'the official website of one of the best uk metal bands.',
-    href: 'https://conjureruk.com'
+    href: 'https://conjureruk.com',
+    icon: '/images/projects/conjurer.png'
   },
   {
     title: 'Payday',
     description: 'building tools for creatives.',
-    href: 'https://payday.so'
+    href: 'https://payday.so',
+    icon: '/images/projects/payday.png'
   },
   {
     title: 'CreativeFolks',
     description: 'a creative agency based in the midlands.',
-    href: 'https://creativefolks.co.uk'
+    href: 'https://creativefolks.co.uk',
+    icon: '/images/projects/creativefolks.png'
   },
   {
     title: 'Rachel Taber',
     description: 'personal website of Rachel Taber, Senior Product Manager',
-    href: 'https://racheltaber.com'
+    href: 'https://racheltaber.com',
+    icon: '/images/projects/racheltaber.png'
   },
   {
     title: '2024',
     description: 'This website, but in 2024.',
-    href: 'https://2024.cargill.dev'
+    href: 'https://2024.cargill.dev',
+    icon: '/images/projects/2024.png'
   },
   {
     title: '2023',
     description: '2024s website, but in 2023.',
-    href: 'https://2023.cargill.dev'
+    href: 'https://2023.cargill.dev',
+    icon: '/images/projects/2023.png'
   }
 ]

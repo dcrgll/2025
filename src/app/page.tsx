@@ -1,7 +1,7 @@
 import Container from '@/components/container'
-import ContentToggle from '@/components/content-toggle'
 import Footer from '@/components/footer'
 import Intro from '@/components/intro'
+import ProjectList from '@/components/project-list'
 import Separator from '@/components/separator'
 import Songs from '@/components/songs'
 import Weather from '@/components/weather'
@@ -11,7 +11,7 @@ export default function Home() {
     <Container>
       <Intro />
       <Separator />
-      <ContentToggle />
+      <ProjectList />
       <Separator />
       <Weather />
       <Separator />

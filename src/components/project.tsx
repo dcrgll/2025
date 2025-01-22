@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowUpRight } from 'lucide-react'
 
@@ -5,20 +6,25 @@ type ProjectProps = {
   title: string
   description: string
   href: string
+  icon: string
 }
 
-export default function Project({ title, description, href }: ProjectProps) {
+export default function Project({
+  title,
+  description,
+  href,
+  icon
+}: ProjectProps) {
   return (
     <div className="mb-5">
       <h3 className="flex items-center gap-2">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src={
-            `https://www.google.com/s2/favicons?domain=${href}&sz=64` ||
-            '/favicon.ico'
-          }
+        {}
+        <Image
+          src={icon}
           alt="Favicon"
           className="h-5 w-5"
+          height={20}
+          width={20}
         />
 
         <div className="group flex items-center gap-2">
