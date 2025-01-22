@@ -30,6 +30,13 @@ export const metadata: Metadata = {
     url: 'https://cargill.dev',
     title: 'Dan Cargill',
     description: 'software engineer, designer, and musician.'
+  },
+  icons: {
+    icon: [
+      {
+        url: '/images/favicon.svg'
+      }
+    ]
   }
 }
 
