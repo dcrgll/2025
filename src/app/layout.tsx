@@ -29,7 +29,8 @@ export const metadata: Metadata = {
   openGraph: {
     url: 'https://cargill.dev',
     title: 'Dan Cargill',
-    description: 'software engineer, designer, and musician.'
+    description: 'software engineer, designer, and musician.',
+    siteName: 'Dan Cargill'
   },
   icons: {
     icon: [
@@ -58,7 +59,25 @@ export default function RootLayout({
       >
         <Background />
         {children}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
       </body>
     </html>
   )
+}
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Dan Cargill',
+  givenName: 'Dan',
+
+  familyName: 'Cargill',
+  gender: 'Male',
+  knowsLanguage: ['English'],
+  nationality: 'British',
+  description:
+    "Hey! I'm Dan Cargill, a software engineer, designer, and musician based in London, UK."
 }
