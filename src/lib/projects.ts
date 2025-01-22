@@ -38,6 +38,11 @@ export const websites = [
     href: 'https://creativefolks.co.uk'
   },
   {
+    title: 'Rachel Taber',
+    description: 'personal website of Rachel Taber, Senior Product Manager',
+    href: 'https://racheltaber.com'
+  },
+  {
     title: '2024',
     description: 'This website, but in 2024.',
     href: 'https://2024.cargill.dev'
