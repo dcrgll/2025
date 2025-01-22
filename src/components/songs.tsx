@@ -8,8 +8,6 @@ export default async function Songs() {
 
   const data = await res.json()
 
-  console.log(data)
-
   return (
     <p className="pb-8 text-sm text-foreground/80">
       My current most played album is: <br />
