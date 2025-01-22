@@ -10,6 +10,11 @@ export const projects = [
     href: 'https://grids.am'
   },
   {
+    title: 'Trains!',
+    description: 'View live train data for any UK station.',
+    href: 'https://trains.cargill.dev'
+  },
+  {
     title: 'Oblique Strategies',
     description: 'A vscode extension for generating random Oblique Strategies.',
     href: 'https://marketplace.visualstudio.com/items?itemName=DanCargill.oblique-strategies'
