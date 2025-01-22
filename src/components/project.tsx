@@ -10,7 +10,7 @@ type ProjectProps = {
 export default function Project({ title, description, href }: ProjectProps) {
   return (
     <div className="mb-5">
-      <h3 className="group flex items-center gap-2">
+      <h3 className="flex items-center gap-2">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={
@@ -21,7 +21,7 @@ export default function Project({ title, description, href }: ProjectProps) {
           className="h-5 w-5"
         />
 
-        <div className="flex items-center gap-2">
+        <div className="group flex items-center gap-2">
           <Link href={href} target="_blank" className="text-[16px]">
             {title}
           </Link>
