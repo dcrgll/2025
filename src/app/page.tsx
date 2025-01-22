@@ -1,8 +1,9 @@
 import Container from '@/components/container'
 import ContentToggle from '@/components/content-toggle'
+import Footer from '@/components/footer'
 import Intro from '@/components/intro'
-// import Projects from '@/components/projects'
 import Separator from '@/components/separator'
+import Weather from '@/components/weather'
 
 export default function Home() {
   return (
@@ -11,6 +12,8 @@ export default function Home() {
       <Separator />
       <ContentToggle />
       <Separator />
+      <Weather />
+      <Footer />
       {/* <Projects /> */}
     </Container>
   )
