@@ -17,9 +17,9 @@ export default function Clock() {
           new Date().toLocaleString('en-US', { timeZone: 'Europe/London' })
         )
       )
-    }, 1000) // Update every second
+    }, 1000)
 
-    return () => clearInterval(interval) // Cleanup on unmount
+    return () => clearInterval(interval)
   }, [])
 
   return time.toLocaleTimeString('en-US', {
