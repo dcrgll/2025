@@ -1,7 +1,6 @@
 export default function Background() {
   return (
-    <>
-      {/* Background GIF */}
+    <div className="pointer-events-none fixed inset-0 -z-30 bg-background/10">
       <div
         className="pointer-events-none fixed inset-0 -z-20"
         style={{
@@ -11,9 +10,9 @@ export default function Background() {
           objectFit: 'contain',
           backgroundRepeat: 'repeat',
           backgroundSize: '6.25rem 6.25rem',
-          filter: 'brightness(0.8)'
+          filter: 'brightness(0.15)'
         }}
       />
-    </>
+    </div>
   )
 }
