@@ -33,7 +33,7 @@ export default function Intro() {
             <Link
               href={link.href}
               target="_blank"
-              className="text-foreground/70 transition-colors duration-300 hover:text-foreground"
+              className="text-foreground/70 hover:text-foreground transition-colors duration-300"
             >
               {link.text}
             </Link>
@@ -45,8 +45,8 @@ export default function Intro() {
   return (
     <>
       <h1 className="mt-5 font-serif text-4xl">
-        <b className="block text-foreground">
-          Hey, I&apos;m <em className="not-italic text-primary">Dan</em>.
+        <b className="text-foreground block">
+          Hey, I&apos;m <em className="text-primary not-italic">Dan</em>.
         </b>
         <span className="text-foreground/40">Playing the internet</span>
         <br />

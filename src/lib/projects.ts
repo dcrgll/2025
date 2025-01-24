@@ -65,7 +65,7 @@ export const websites: Project[] = [
   },
   {
     title: 'Rachel Taber',
-    description: 'personal website of Rachel Taber, Senior Product Manager',
+    description: 'personal website of Rachel Taber.',
     href: 'https://racheltaber.com',
     icon: '/images/projects/racheltaber.png'
   },
