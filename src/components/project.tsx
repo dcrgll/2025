@@ -31,7 +31,7 @@ export default function Project({
           <Link href={href} target="_blank" className="text-[16px]">
             {title}
           </Link>
-          <ArrowUpRight className="-ml-2 -mt-2 h-3 w-3 transform text-foreground/30 transition-all duration-300 group-hover:-ml-1 group-hover:-mt-3" />
+          <ArrowUpRight className="-ml-2 -mt-2 h-3 w-3 transform text-foreground/30" />
         </div>
       </h3>
 

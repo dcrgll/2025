@@ -19,7 +19,7 @@ const links: Link[] = [
     text: 'Instagram'
   },
   {
-    href: 'https://docs.google.com/document/d/e/2PACX-1vRHjEM9Yq7zmekeN5oa62XdcOXQrCoFgawAYqvvsNDXWB_PmifRxoAbGxm8-P2Aemxuc2RRnJZOvNGr/pub',
+    href: 'https://cargill.cv',
     text: 'CV'
   }
 ]

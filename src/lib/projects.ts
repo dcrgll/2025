@@ -29,6 +29,12 @@ export const projects: Project[] = [
     description: 'A vscode extension for generating random Oblique Strategies.',
     href: 'https://marketplace.visualstudio.com/items?itemName=DanCargill.oblique-strategies',
     icon: '/images/projects/vscode.png'
+  },
+  {
+    title: 'Denigrata - Missa Defunctorum',
+    description: 'Recorded and released an album with friends from university.',
+    icon: '/images/projects/denigrata.png',
+    href: 'https://open.spotify.com/album/1wgvp84zCZWMqcYWqvaK5a?si=LQhnPfOQTgKRaD_t0mVEww'
   }
 ]
 

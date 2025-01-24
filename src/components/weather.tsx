@@ -1,16 +1,35 @@
+'use client'
+
+import { useEffect, useState } from 'react'
+
 import { weather } from '@/lib/weather'
 
 import Clock from './clock'
 
-export default async function Weather() {
-  const response = await fetch(
-    'https://api.open-meteo.com/v1/forecast?latitude=51.700329&longitude=-0.108655&current=temperature_2m,weather_code'
-  )
+export default function Weather() {
+  const [weatherCode, setWeatherCode] = useState<number | null>(null)
+  const [temperature, setTemperature] = useState<number | null>(null)
 
-  const data = await response.json()
+  useEffect(() => {
+    async function fetchWeather() {
+      try {
+        const response = await fetch(
+          'https://api.open-meteo.com/v1/forecast?latitude=51.700329&longitude=-0.108655&current=temperature_2m,weather_code'
+        )
+        const data = await response.json()
+        setWeatherCode(data.current.weather_code)
+        setTemperature(data.current.temperature_2m)
+      } catch (error) {
+        console.error('Error fetching weather data:', error)
+      }
+    }
 
-  const weatherCode = data.current.weather_code
-  const temperature = data.current.temperature_2m
+    fetchWeather()
+  }, [])
+
+  if (weatherCode === null || temperature === null) {
+    return <p className="text-sm text-foreground/80">Loading weather...</p>
+  }
 
   return (
     <p className="text-sm text-foreground/80">
