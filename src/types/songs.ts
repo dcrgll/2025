@@ -6,7 +6,7 @@ export type Album = {
 
 export type Track = {
   name: string
-  artist: { name: string }
+  artist: { '#text': string }
   url: string
 }
 
