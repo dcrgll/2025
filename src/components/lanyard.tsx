@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
-import Link from 'next/link'
 import { AnimatePresence, motion } from 'framer-motion'
 import { Music } from 'lucide-react'
 
@@ -100,13 +99,6 @@ export default function Lanyard() {
     return <div className="text-gray-500">Loading...</div>
   }
 
-  const statusColor = {
-    online: 'bg-green-500',
-    idle: 'bg-yellow-500',
-    dnd: 'bg-red-500',
-    offline: 'bg-gray-500'
-  }[data.discord_status]
-
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -114,31 +106,6 @@ export default function Lanyard() {
       transition={{ duration: 0.5, delay: 1 }}
       className="mb-8 w-full max-w-md space-y-4"
     >
-      <div className="flex items-center space-x-4">
-        <Image
-          src={`https://cdn.discordapp.com/avatars/${process.env.NEXT_PUBLIC_DISCORD_USER_ID}/${data.discord_user.avatar}.png`}
-          alt={data.discord_user.username}
-          width={30}
-          height={30}
-          className="rounded-full"
-        />
-        <div>
-          <Link
-            href={`https://discord.gg/U62sVUWc`}
-            className="text-sm font-bold"
-          >
-            {data.discord_user.username}
-          </Link>
-
-          <div className="flex items-center space-x-2">
-            <div className={`h-2 w-2 rounded-full ${statusColor}`} />
-            <span className="text-foreground/60 text-xs capitalize">
-              {data.discord_status}
-            </span>
-          </div>
-        </div>
-      </div>
-
       <AnimatePresence mode="wait">
         {data.spotify && (
           <motion.div
@@ -149,7 +116,7 @@ export default function Lanyard() {
             transition={{ duration: 0.4 }}
             className="space-y-2"
           >
-            <h3 className="flex items-center text-sm font-semibold">
+            <h3 className="flex items-center text-sm">
               <Music className="mr-2 h-4 w-4" />
               Listening to Spotify
             </h3>
@@ -163,12 +130,19 @@ export default function Lanyard() {
               />
               <div>
                 <div className="text-sm font-semibold">{data.spotify.song}</div>
-                <div className="text-xs text-gray-500">
+                <div className="text-foreground/80 text-xs">
                   {data.spotify.artist}
                 </div>
                 {data.spotify.timestamps && (
-                  <div className="text-[10px] text-gray-500">
-                    {formatTime(currentTime - data.spotify.timestamps.start)} /{' '}
+                  <div className="text-foreground/80 text-[10px]">
+                    {formatTime(
+                      Math.min(
+                        currentTime - data.spotify.timestamps.start,
+                        data.spotify.timestamps.end -
+                          data.spotify.timestamps.start
+                      )
+                    )}{' '}
+                    /{' '}
                     {formatTime(
                       data.spotify.timestamps.end -
                         data.spotify.timestamps.start
