@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import { motion } from 'framer-motion'
 
 import { weather } from '@/lib/weather'
 
@@ -28,11 +29,16 @@ export default function Weather() {
   }, [])
 
   if (weatherCode === null || temperature === null) {
-    return <p className="text-sm text-foreground/80">Loading weather...</p>
+    return <p className="text-foreground/80 text-sm">Loading weather...</p>
   }
 
   return (
-    <p className="text-sm text-foreground/80">
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: 0.8 }} // Add delay here
+      className="text-foreground/80 text-sm"
+    >
       It&apos;s currently{' '}
       <b className="text-foreground">
         <Clock />
@@ -45,6 +51,6 @@ export default function Weather() {
         }}
       />{' '}
       and <b className="text-foreground">{temperature}°C</b>.
-    </p>
+    </motion.div>
   )
 }
