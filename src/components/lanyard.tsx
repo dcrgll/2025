@@ -131,7 +131,7 @@ export default function Lanyard() {
                 alt={`${data.spotify.song} album art`}
                 width={40}
                 height={40}
-                className='rounded'
+                className='rounded-sm'
               />
               <div>
                 <div className='text-sm font-semibold'>{data.spotify.song}</div>
