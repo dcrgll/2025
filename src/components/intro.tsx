@@ -1,28 +1,5 @@
+import { links } from '@/lib/site'
 import Link from 'next/link'
-
-type Link = {
-  href: string
-  text: string
-}
-
-const links: Link[] = [
-  {
-    href: 'https://github.com/dcrgll',
-    text: 'Github'
-  },
-  {
-    href: 'https://linkedin.com/in/dancargill',
-    text: 'LinkedIn'
-  },
-  {
-    href: 'https://instagram.com/dncrgll',
-    text: 'Instagram'
-  },
-  {
-    href: 'https://cargill.cv',
-    text: 'CV'
-  }
-]
 
 export default function Intro() {
   const renderLinks = () => {

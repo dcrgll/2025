@@ -1,4 +1,5 @@
-import type { Metadata, Viewport } from 'next'
+import { jsonLd, metadata } from '@/lib/meta'
+import type { Viewport } from 'next'
 import { Inter } from 'next/font/google'
 import localFont from 'next/font/local'
 
@@ -15,31 +16,6 @@ const sfRounded = localFont({
   variable: '--font-sf-rounded',
   src: '../../public/fonts/SF Pro Rounded Bold.otf'
 })
-
-export const metadata: Metadata = {
-  metadataBase: new URL('https://cargill.dev'),
-  title: {
-    template: '%s | Dan Cargill',
-    default: 'Dan Cargill'
-  },
-  description: 'software engineer, designer, and musician.',
-  twitter: {
-    card: 'summary_large_image'
-  },
-  openGraph: {
-    url: 'https://cargill.dev',
-    title: 'Dan Cargill',
-    description: 'software engineer, designer, and musician.',
-    siteName: 'Dan Cargill'
-  },
-  icons: {
-    icon: [
-      {
-        url: '/images/favicon.svg'
-      }
-    ]
-  }
-}
 
 export const viewport: Viewport = {
   width: 'device-width',
@@ -69,16 +45,4 @@ export default function RootLayout({
   )
 }
 
-const jsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'Person',
-  name: 'Dan Cargill',
-  givenName: 'Dan',
-
-  familyName: 'Cargill',
-  gender: 'Male',
-  knowsLanguage: ['English'],
-  nationality: 'British',
-  description:
-    "Hey! I'm Dan Cargill, a software engineer, designer, and musician based in London, UK."
-}
+export { metadata }

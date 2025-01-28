@@ -4,46 +4,13 @@ import { AnimatePresence, motion } from 'framer-motion'
 import { Music } from 'lucide-react'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
+import { fetchLanyardData, formatTime, type LanyardData } from './helpers'
 
-interface LanyardData {
-  spotify: {
-    song: string
-    artist: string
-    // biome-ignore lint/style/useNamingConvention: <Api Data>
-    album_art_url: string
-    timestamps: {
-      start: number
-      end: number
-    }
-  } | null
-  // biome-ignore lint/style/useNamingConvention: <Api Data>
-  discord_user: {
-    username: string
-    avatar: string
-  }
-  // biome-ignore lint/style/useNamingConvention: <Api Data>
-  discord_status: 'online' | 'idle' | 'dnd' | 'offline'
-  activities: Array<{
-    name: string
-    type: number
-    state: string
-    details: string
-    timestamps?: {
-      start?: number
-      end?: number
-    }
-  }>
-}
-
-function formatTime(ms: number): string {
-  const seconds = Math.floor(ms / 1000)
-  const minutes = Math.floor(seconds / 60)
-  const hours = Math.floor(minutes / 60)
-  return hours > 0
-    ? `${hours}:${minutes % 60}:${seconds % 60}`
-    : `${minutes}:${(seconds % 60).toString().padStart(2, '0')}`
-}
-
+/**
+ *
+ * A component that displays the user's current Spotify activity using the Lanyard API.
+ * The component will automatically refresh when the song ends.
+ */
 export default function Lanyard() {
   const [data, setData] = useState<LanyardData | null>(null)
   const [error, setError] = useState<string | null>(null)
@@ -58,18 +25,12 @@ export default function Lanyard() {
         if (!userId) {
           throw new Error('Discord user ID not found in environment variables')
         }
-        const response = await fetch(
-          `https://api.lanyard.rest/v1/users/${userId}`
-        )
-        if (!response.ok) {
-          throw new Error('Failed to fetch data from Lanyard API')
-        }
-        const json = await response.json()
-        setData(json.data)
 
-        // Schedule next fetch
-        if (json.data.spotify?.timestamps) {
-          const { end } = json.data.spotify.timestamps
+        const fetchedData = await fetchLanyardData(userId)
+        setData(fetchedData)
+
+        if (fetchedData.spotify?.timestamps) {
+          const { end } = fetchedData.spotify.timestamps
           const remainingTime = end - Date.now()
           timer = setTimeout(fetchData, remainingTime)
         } else {
@@ -114,7 +75,7 @@ export default function Lanyard() {
       <AnimatePresence mode='wait'>
         {data.spotify && (
           <motion.div
-            key={data.spotify.song} // Use song as the unique key
+            key={data.spotify.song}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}

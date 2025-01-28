@@ -1,3 +1,7 @@
+/**
+ * A background component that displays a rain gif.
+ */
+
 export default function Background() {
   return (
     <div className='pointer-events-none fixed inset-0 -z-30 bg-background/10'>
