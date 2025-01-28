@@ -27,7 +27,7 @@ export default function Weather() {
   }, [])
 
   if (weatherCode === null || temperature === null) {
-    return <p className='text-foreground/80 text-sm'>Loading weather...</p>
+    return
   }
 
   return (
