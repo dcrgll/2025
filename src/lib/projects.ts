@@ -70,6 +70,12 @@ export const websites: Project[] = [
     icon: '/images/projects/racheltaber.png'
   },
   {
+    title: '2025',
+    description: "This website, that you're on right now.",
+    href: 'https://github.com/dcrgll/2025',
+    icon: '/images/projects/2025.svg'
+  },
+  {
     title: '2024',
     description: 'This website, but in 2024.',
     href: 'https://2024.cargill.dev',

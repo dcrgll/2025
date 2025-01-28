@@ -1,36 +1,56 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Personal Website
 
-## Getting Started
+Welcome to my [personal website](https://cargill.dev)!
 
-First, run the development server:
+## 🚀 Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Built with modern Typescript, using tools and frameworks like [next](https://github.com/vercel/next.js) and [tailwind](https://github.com/tailwindlabs/tailwindcss/).
+- Animations via [framer-motion](https://www.npmjs.com/package/framer-motion).
+- A great developer experience with [biome](https://github.com/biomejs/biome)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🔧 Dependencies
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Ensure you have [node](https://nodejs.org/) >= v22. I like to use pnpm to manage dependencies, but npm, bun or yarn will work as well.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🚀 Setup and Running
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Clone the repository:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+   ```bash
+   git clone git@github.com:dcrgll/2025.git
+   ```
 
-## Deploy on Vercel
+2. (Optional) Ensure you're on Node v22 or higher:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   ```bash
+   node --version
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+3. Install dependencies:
+
+   ```bash
+   pnpm install
+   ```
+4. Setup environment variables:
+
+	Rename the `.env.example` file to `.env.local` and fill in the necessary values.
+
+	  ```bash
+    COUNTER_ADMIN_KEY=
+    COUNTER_URL=
+    NEXT_PUBLIC_DISCORD_USER_ID=
+ 	 ```
+
+	- [How to find your discord id.](https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID#h_01HRSTXPS5H5D7JBY2QKKPVKNA)
+
+	- [Create your own counter](https://jasoncameron.dev/abacus/)
+
+5. Start the application:
+
+   ```bash
+   pnpm dev
+   ```
+
+By default, the application should be available at [http://localhost:3000/](http://localhost:3000/).
