@@ -53,14 +53,15 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
+    <html lang='en'>
       <body
         className={`${interSans.variable} ${sfRounded.variable} my-36 font-sans antialiased`}
       >
         <Background />
         {children}
         <script
-          type="application/ld+json"
+          type='application/ld+json'
+          // biome-ignore lint/security/noDangerouslySetInnerHtml: <Need to set JSON-LD>
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </body>

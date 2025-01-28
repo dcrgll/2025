@@ -1,0 +1,6 @@
+{
+	"extends": ["@dc_/biome-config"],
+	"files": {
+		"include": ["./**/*"]
+	}
+}

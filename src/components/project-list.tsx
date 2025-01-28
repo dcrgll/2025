@@ -1,7 +1,7 @@
 'use client'
 
-import { useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
+import { useState } from 'react'
 
 import { projects, websites } from '@/lib/projects'
 
@@ -27,7 +27,7 @@ export default function ContentToggle() {
   }
 
   const handleToggle = () => {
-    setShowProjects((prev) => !prev)
+    setShowProjects(prev => !prev)
     setTimeout(() => {
       setTitle(showProjects ? 'Websites' : 'Projects')
     }, 200)
@@ -35,14 +35,14 @@ export default function ContentToggle() {
 
   return (
     <section>
-      <div className="mb-4 flex items-center justify-between">
-        <h2 className="font-serif text-2xl font-bold">{title}</h2>
+      <div className='mb-4 flex items-center justify-between'>
+        <h2 className='font-serif text-2xl font-bold'>{title}</h2>
 
-        <label className="relative inline-flex cursor-pointer items-center">
+        <label className='relative inline-flex cursor-pointer items-center'>
           <input
-            type="checkbox"
-            value=""
-            className="peer sr-only"
+            type='checkbox'
+            value=''
+            className='peer sr-only'
             onChange={handleToggle}
           />
           <div className="peer flex h-8 items-center gap-4 rounded-full bg-foreground/5 px-3 text-xs text-white duration-700 after:absolute after:left-1 after:h-6 after:w-16 after:rounded-full after:bg-foreground/10 after:transition-all after:content-[''] peer-checked:after:translate-x-full peer-focus:outline-none">
@@ -53,20 +53,20 @@ export default function ContentToggle() {
       </div>
 
       <div>
-        <AnimatePresence mode="wait">
+        <AnimatePresence mode='wait'>
           {showProjects ? (
             <motion.div
-              key="projects"
+              key='projects'
               variants={containerVariants}
-              initial="hidden"
-              animate="visible"
-              exit="hidden"
+              initial='hidden'
+              animate='visible'
+              exit='hidden'
             >
-              {projects.map((project, index) => (
+              {projects.map(project => (
                 <motion.div
-                  key={index}
+                  key={project.href}
                   variants={itemVariants}
-                  className="mb-4"
+                  className='mb-4'
                 >
                   <Project
                     title={project.title}
@@ -79,17 +79,17 @@ export default function ContentToggle() {
             </motion.div>
           ) : (
             <motion.div
-              key="websites"
+              key='websites'
               variants={containerVariants}
-              initial="hidden"
-              animate="visible"
-              exit="hidden"
+              initial='hidden'
+              animate='visible'
+              exit='hidden'
             >
-              {websites.map((website, index) => (
+              {websites.map(website => (
                 <motion.div
-                  key={index}
+                  key={website.href}
                   variants={itemVariants}
-                  className="mb-4"
+                  className='mb-4'
                 >
                   <Project
                     title={website.title}

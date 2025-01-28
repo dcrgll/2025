@@ -1,7 +1,7 @@
 'use client'
 
-import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
+import { useEffect, useState } from 'react'
 
 import { weather } from '@/lib/weather'
 
@@ -20,16 +20,14 @@ export default function Weather() {
         const data = await response.json()
         setWeatherCode(data.current.weather_code)
         setTemperature(data.current.temperature_2m)
-      } catch (error) {
-        console.error('Error fetching weather data:', error)
-      }
+      } catch (error) {}
     }
 
     fetchWeather()
   }, [])
 
   if (weatherCode === null || temperature === null) {
-    return <p className="text-foreground/80 text-sm">Loading weather...</p>
+    return <p className='text-foreground/80 text-sm'>Loading weather...</p>
   }
 
   return (
@@ -37,20 +35,21 @@ export default function Weather() {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: 0.8 }} // Add delay here
-      className="text-foreground/80 text-sm"
+      className='text-foreground/80 text-sm'
     >
       It&apos;s currently{' '}
-      <b className="text-foreground">
+      <b className='text-foreground'>
         <Clock />
       </b>{' '}
       in London.
       <br />
       <span
+        // biome-ignore lint/security/noDangerouslySetInnerHtml: <Need to set HTML>
         dangerouslySetInnerHTML={{
           __html: weather[weatherCode as keyof typeof weather]
         }}
       />{' '}
-      and <b className="text-foreground">{temperature}°C</b>.
+      and <b className='text-foreground'>{temperature}°C</b>.
     </motion.div>
   )
 }

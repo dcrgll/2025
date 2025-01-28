@@ -1,24 +1,27 @@
 'use client'
 
-import { useEffect, useState } from 'react'
-import Image from 'next/image'
 import { AnimatePresence, motion } from 'framer-motion'
 import { Music } from 'lucide-react'
+import Image from 'next/image'
+import { useEffect, useState } from 'react'
 
 interface LanyardData {
   spotify: {
     song: string
     artist: string
+    // biome-ignore lint/style/useNamingConvention: <Api Data>
     album_art_url: string
     timestamps: {
       start: number
       end: number
     }
   } | null
+  // biome-ignore lint/style/useNamingConvention: <Api Data>
   discord_user: {
     username: string
     avatar: string
   }
+  // biome-ignore lint/style/useNamingConvention: <Api Data>
   discord_status: 'online' | 'idle' | 'dnd' | 'offline'
   activities: Array<{
     name: string
@@ -65,7 +68,7 @@ export default function Lanyard() {
         setData(json.data)
 
         // Schedule next fetch
-        if (json.data.spotify && json.data.spotify.timestamps) {
+        if (json.data.spotify?.timestamps) {
           const { end } = json.data.spotify.timestamps
           const remainingTime = end - Date.now()
           timer = setTimeout(fetchData, remainingTime)
@@ -82,7 +85,9 @@ export default function Lanyard() {
     fetchData()
 
     return () => {
-      if (timer) clearTimeout(timer)
+      if (timer) {
+        clearTimeout(timer)
+      }
     }
   }, [])
 
@@ -92,11 +97,11 @@ export default function Lanyard() {
   }, [])
 
   if (error) {
-    return <div className="text-red-500">Error: {error}</div>
+    return <div className='text-red-500'>Error: {error}</div>
   }
 
   if (!data) {
-    return <div className="text-gray-500">Loading...</div>
+    return <div className='text-gray-500'>Loading...</div>
   }
 
   return (
@@ -104,9 +109,9 @@ export default function Lanyard() {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: 1 }}
-      className="mb-8 w-full max-w-md space-y-4"
+      className='mb-8 w-full max-w-md space-y-4'
     >
-      <AnimatePresence mode="wait">
+      <AnimatePresence mode='wait'>
         {data.spotify && (
           <motion.div
             key={data.spotify.song} // Use song as the unique key
@@ -114,27 +119,27 @@ export default function Lanyard() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.4 }}
-            className="space-y-2"
+            className='space-y-2'
           >
-            <h3 className="flex items-center text-sm">
-              <Music className="mr-2 h-4 w-4" />
+            <h3 className='flex items-center text-sm'>
+              <Music className='mr-2 h-4 w-4' />
               Listening to Spotify
             </h3>
-            <div className="flex items-center space-x-4">
+            <div className='flex items-center space-x-4'>
               <Image
                 src={data.spotify.album_art_url || '/placeholder.svg'}
                 alt={`${data.spotify.song} album art`}
                 width={40}
                 height={40}
-                className="rounded"
+                className='rounded'
               />
               <div>
-                <div className="text-sm font-semibold">{data.spotify.song}</div>
-                <div className="text-foreground/80 text-xs">
+                <div className='text-sm font-semibold'>{data.spotify.song}</div>
+                <div className='text-foreground/80 text-xs'>
                   {data.spotify.artist}
                 </div>
                 {data.spotify.timestamps && (
-                  <div className="text-foreground/80 text-[10px]">
+                  <div className='text-foreground/80 text-[10px]'>
                     {formatTime(
                       Math.min(
                         currentTime - data.spotify.timestamps.start,

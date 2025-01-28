@@ -1,8 +1,8 @@
 export default function Background() {
   return (
-    <div className="pointer-events-none fixed inset-0 -z-30 bg-background/10">
+    <div className='pointer-events-none fixed inset-0 -z-30 bg-background/10'>
       <div
-        className="pointer-events-none fixed inset-0 -z-20"
+        className='pointer-events-none fixed inset-0 -z-20'
         style={{
           backgroundImage: 'url(/images/rain.gif)',
           imageRendering: 'pixelated',

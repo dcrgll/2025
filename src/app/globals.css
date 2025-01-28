@@ -2,13 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
 @layer base {
   :root {
-   --background: 13 14 15;
-   --foreground: 218 220 224;
-   --primary: 53 206 141;
+    --background: 13 14 15;
+    --foreground: 218 220 224;
+    --primary: 53 206 141;
   }
 
   body {
@@ -16,4 +14,3 @@
     background: rgb(var(--background));
   }
 }
-
