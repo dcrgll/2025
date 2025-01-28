@@ -23,12 +23,12 @@ export const formatNumber = (number: number): string => {
  *  Fetches the counter data from https://jasoncameron.dev/abacus/.
  *  */
 export async function fetchCounterData() {
-  if (!process.env.COUNTER_URL) {
+  if (!process.env.NEXT_PUBLIC_COUNTER_URL) {
     return
   }
 
   try {
-    const response = await fetch(process.env.COUNTER_URL)
+    const response = await fetch(process.env.NEXT_PUBLIC_COUNTER_URL)
     const { value: visitCount } = await response.json()
 
     return visitCount
