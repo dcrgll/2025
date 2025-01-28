@@ -5,7 +5,7 @@ Welcome to my [personal website](https://cargill.dev)!
 ## 🚀 Features
 
 - Built with modern Typescript, using tools and frameworks like [next](https://github.com/vercel/next.js) and [tailwind](https://github.com/tailwindlabs/tailwindcss/).
-- Animations via [framer-motion](https://www.npmjs.com/package/framer-motion).
+- Animations via [motion](https://github.com/motiondivision/motion).
 - A great developer experience with [biome](https://github.com/biomejs/biome)
 
 ## 🔧 Dependencies
