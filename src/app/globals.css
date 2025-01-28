@@ -4,9 +4,9 @@
 
 @layer base {
   :root {
-    --background: 13 14 15;
-    --foreground: 218 220 224;
-    --primary: 53 206 141;
+    --background: 16 15 15;
+    --foreground: 206 205 195;
+    --primary: 58 169 159;
   }
 
   body {
