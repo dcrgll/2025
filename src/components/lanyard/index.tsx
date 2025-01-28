@@ -1,7 +1,7 @@
 'use client'
 
-import { AnimatePresence, motion } from 'framer-motion'
 import { Music } from 'lucide-react'
+import { AnimatePresence, motion } from 'motion/react'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
 import { fetchLanyardData, formatTime, type LanyardData } from './helpers'
