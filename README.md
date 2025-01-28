@@ -14,8 +14,6 @@ Ensure you have [node](https://nodejs.org/) >= v22. I like to use pnpm to manage
 
 ## 🚀 Setup and Running
 
-
-
 1. Clone the repository:
 
    ```bash
@@ -33,19 +31,19 @@ Ensure you have [node](https://nodejs.org/) >= v22. I like to use pnpm to manage
    ```bash
    pnpm install
    ```
+
 4. Setup environment variables:
 
-	Rename the `.env.example` file to `.env.local` and fill in the necessary values.
+   Rename the `.env.example` file to `.env.local` and fill in the necessary values.
 
-	  ```bash
-    COUNTER_ADMIN_KEY=
-    COUNTER_URL=
-    NEXT_PUBLIC_DISCORD_USER_ID=
- 	 ```
+   ```bash
+   NEXT_PUBLIC_COUNTER_URL=
+   NEXT_PUBLIC_DISCORD_USER_ID=
+   ```
 
-	- [How to find your discord id.](https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID#h_01HRSTXPS5H5D7JBY2QKKPVKNA)
+   - [How to find your discord id.](https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID#h_01HRSTXPS5H5D7JBY2QKKPVKNA)
 
-	- [Create your own counter](https://jasoncameron.dev/abacus/)
+   - [Create your own counter](https://jasoncameron.dev/abacus/)
 
 5. Start the application:
 
