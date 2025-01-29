@@ -14,10 +14,6 @@ export default function Counter() {
     fetchData()
   }, [])
 
-  useEffect(() => {
-    console.log('visitCount:', visitCount)
-  }, [visitCount])
-
   const loading = visitCount === null
 
   if (loading || visitCount === undefined) {
