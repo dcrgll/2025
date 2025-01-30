@@ -11,22 +11,21 @@
     "start": "next start"
   },
   "dependencies": {
-    "framer-motion": "^12.0.1",
     "lucide-react": "^0.473.0",
     "motion": "^12.0.6",
-    "next": "15.1.5",
+    "next": "15.1.6",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
     "@dc_/biome-config": "^1.0.3",
-    "@tailwindcss/postcss": "^4.0.0",
+    "@tailwindcss/postcss": "^4.0.1",
     "@types/node": "^22",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "postcss": "^8",
-    "tailwindcss": "^4.0.0",
+    "tailwindcss": "^4.0.1",
     "typescript": "^5"
   },
   "packageManager": "pnpm@9.15.4",
