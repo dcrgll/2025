@@ -25,6 +25,12 @@ export const projects: Project[] = [
     icon: '/images/projects/trains.png'
   },
   {
+    title: 'Everyday',
+    description: 'A year tracker.',
+    href: 'https://everyday.cargill.dev',
+    icon: '/images/projects/everyday.png'
+  },
+  {
     title: 'Oblique Strategies',
     description: 'A vscode extension for generating random Oblique Strategies.',
     href: 'https://marketplace.visualstudio.com/items?itemName=DanCargill.oblique-strategies',
