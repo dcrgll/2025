@@ -6,8 +6,6 @@ import { motion } from 'motion/react'
 import Link from 'next/link'
 import { useState } from 'react'
 
-import Sparkles from 'react-sparkle'
-
 export default function Intro() {
   const [showSecondLine, setShowSecondLine] = useState(false)
 
@@ -41,16 +39,7 @@ export default function Intro() {
               transition={{ duration: 0.75 }}
             >
               Playing with <span className='text-tertiary'>Apps</span> &{' '}
-              <div className='text-secondary italic relative inline-block'>
-                AI
-                <Sparkles
-                  color='yellow'
-                  flicker
-                  flickerSpeed='slowest'
-                  count={5}
-                  overflowPx={10}
-                />
-              </div>
+              <span className='text-secondary italic'>AI</span>
             </motion.span>
           ) : (
             <>
