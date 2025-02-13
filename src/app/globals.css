@@ -1,8 +1,6 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: var(--font-inter-sans);
-  --font-serif: var(--font-sf-rounded);
 
   --color-background: rgb(var(--background));
   --color-foreground: rgb(var(--foreground));
@@ -28,6 +26,8 @@
 }
 
 @layer base {
+
+
   :root {
     --background: 16 15 15;
     --foreground: 206 205 195;
@@ -35,6 +35,8 @@
   }
 
   body {
+    --font-sans: var(--font-inter-sans);
+    --font-serif: var(--font-sf-rounded);
     color: rgb(var(--foreground));
     background: rgb(var(--background));
   }
