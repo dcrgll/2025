@@ -27,7 +27,7 @@ export default function Intro() {
 
   return (
     <>
-      <h1 className='mt-5 font-serif text-4xl'>
+      <h1 className='mt-5 font-serif text-4xl w-full'>
         <b className='text-foreground block'>
           Hey, I&apos;m <em className='text-primary not-italic'>Dan</em>.
         </b>
@@ -37,9 +37,10 @@ export default function Intro() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.75 }}
+              className='text-[2rem]'
             >
               Playing with <span className='text-tertiary'>Apps</span> &{' '}
-              <span className='text-secondary italic'>AI</span>
+              <span className='text-secondary'>AI</span>
             </motion.span>
           ) : (
             <>
