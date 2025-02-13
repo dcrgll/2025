@@ -5,6 +5,8 @@
   --color-background: rgb(var(--background));
   --color-foreground: rgb(var(--foreground));
   --color-primary: rgb(var(--primary));
+  --color-secondary: rgb(var(--secondary));
+  --color-tertiary: rgb(var(--tertiary));
 }
 
 /*
@@ -32,6 +34,8 @@
     --background: 16 15 15;
     --foreground: 206 205 195;
     --primary: 58 169 159;
+    --secondary: 255 113 91;
+    --tertiary: 114 109 168;
   }
 
   body {
