@@ -31,7 +31,7 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body
-        className={`${interSans.variable} ${sfRounded.variable} my-36 font-sans antialiased`}
+        className={`${interSans.variable} ${sfRounded.variable} font-sans antialiased`}
       >
         <Background />
         {children}
