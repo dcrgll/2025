@@ -4,7 +4,7 @@ import Container from '@/components/container'
 import { useEffect, useState } from 'react'
 
 export default function May14Page() {
-  const targetDate = new Date('2025-05-08T17:00:00').getTime()
+  const targetDate = new Date('2025-03-28T17:00:00').getTime()
   const [timeLeft, setTimeLeft] = useState(targetDate - Date.now())
 
   useEffect(() => {
