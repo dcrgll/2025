@@ -36,10 +36,32 @@ export const projects: Project[] = [
     description: 'Recorded and released an album with friends from university.',
     icon: '/images/projects/denigrata.png',
     href: 'https://open.spotify.com/album/1wgvp84zCZWMqcYWqvaK5a?si=LQhnPfOQTgKRaD_t0mVEww'
+  }, {
+    title: '2025',
+    description: "This website, that you're on right now.",
+    href: 'https://github.com/dcrgll/2025',
+    icon: '/images/projects/2025.svg'
+  },
+  {
+    title: '2024',
+    description: 'This website, but in 2024.',
+    href: 'https://2024.cargill.dev',
+    icon: '/images/projects/2024.png'
+  },
+  {
+    title: '2023',
+    description: '2024s website, but in 2023.',
+    href: 'https://2023.cargill.dev',
+    icon: '/images/projects/2023.png'
   }
 ]
 
-export const websites: Project[] = [
+export const websites: Project[] = [{
+  title:'Cleo',
+  description:'A tool for managing your money.',
+  href:'https://web.meetcleo.com',
+  icon:'/images/projects/cleo.png'
+},
   {
     title: 'StudentBeans',
     description: "the world's leading student loyalty network.",
@@ -64,28 +86,5 @@ export const websites: Project[] = [
     href: 'https://creativefolks.co.uk',
     icon: '/images/projects/creativefolks.png'
   },
-  {
-    title: 'Rachel Taber',
-    description: 'personal website of Rachel Taber.',
-    href: 'https://racheltaber.com',
-    icon: '/images/projects/racheltaber.png'
-  },
-  {
-    title: '2025',
-    description: "This website, that you're on right now.",
-    href: 'https://github.com/dcrgll/2025',
-    icon: '/images/projects/2025.svg'
-  },
-  {
-    title: '2024',
-    description: 'This website, but in 2024.',
-    href: 'https://2024.cargill.dev',
-    icon: '/images/projects/2024.png'
-  },
-  {
-    title: '2023',
-    description: '2024s website, but in 2023.',
-    href: 'https://2023.cargill.dev',
-    icon: '/images/projects/2023.png'
-  }
+ 
 ]
