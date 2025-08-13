@@ -56,7 +56,7 @@ export default function Intro() {
           )}
         </span>
         <br />
-        <b className='text-foreground'>in London, UK</b>.
+        <b className='text-foreground'>in the Midlands, UK</b>.
       </h1>
 
       <nav>{renderLinks()}</nav>

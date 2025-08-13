@@ -15,7 +15,7 @@ export default function Weather() {
   useEffect(() => {
     async function loadWeather() {
       try {
-        const data = await fetchWeatherData(51.700329, -0.108655)
+        const data = await fetchWeatherData(52.25, -0.8833)
         setWeatherData(data)
       } catch (err) {
         setError(
@@ -50,7 +50,7 @@ export default function Weather() {
       <b className='text-foreground'>
         <Clock />
       </b>{' '}
-      in London.
+      in Northampton.
       <br />
       <span
         // biome-ignore lint/security/noDangerouslySetInnerHtml: <Rendering emojis for each weather code>

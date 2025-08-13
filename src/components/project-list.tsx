@@ -46,8 +46,8 @@ export default function ContentToggle() {
             onChange={handleToggle}
           />
           <div className="peer flex h-8 items-center gap-4 rounded-full bg-foreground/5 px-3 text-xs text-white duration-700 after:absolute after:left-1 after:h-6 after:w-16 after:rounded-full after:bg-foreground/10 after:transition-all after:content-[''] peer-checked:after:translate-x-full peer-focus:outline-hidden">
-            <span>Projects</span>
-            <span>Websites</span>
+            <span>Personal</span>
+            <span>Career</span>
           </div>
         </label>
       </div>
