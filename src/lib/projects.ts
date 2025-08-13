@@ -6,12 +6,7 @@ type Project = {
 }
 
 export const projects: Project[] = [
-  {
-    title: 'Feeeedback',
-    description: 'A suite of tools for collecting user feedback.',
-    href: 'https://feeeedback.com',
-    icon: '/images/projects/feeeedback.png'
-  },
+
   {
     title: 'Grids.am',
     description: 'A collage generator for Last.fm users.',
